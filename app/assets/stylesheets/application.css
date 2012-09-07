@@ -17,7 +17,7 @@ body {
 	font-style: normal;
 	line-height: normal;
 	font-weight: normal;
-	background: url(Images/bg.png) repeat-x #267F00;
+	background: url(../Images/bg.png) repeat-x #267F00;
 	color: #FFFFFF;
 }
 
@@ -40,7 +40,7 @@ html, body, #Wrapper {
 }
 
 #WormLogo {
-    background: url(Images/worm.png) no-repeat scroll top transparent;
+    background: url(../Images/worm.png) no-repeat scroll top transparent;
 	height: 385px;
 	width: 302px;
 	padding: 0px;
