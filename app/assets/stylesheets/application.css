@@ -17,7 +17,7 @@ body {
 	font-style: normal;
 	line-height: normal;
 	font-weight: normal;
-	background-image: url(./Images/bg.png);
+	background: url(Images/bg.png) repeat-x #267F00;
 	color: #FFFFFF;
 }
 
@@ -39,10 +39,10 @@ html, body, #Wrapper {
 	background-color:#000000;
 }
 
-#ReadifyLogo {
-    background: url(./Images/readify-logo.png) no-repeat scroll top transparent;
-	height: 102px;
-	width: 169px;
+#WormLogo {
+    background: url(Images/worm.png) no-repeat scroll top transparent;
+	height: 385px;
+	width: 302px;
 	padding: 0px;
 	text-align: left;
 	position:relative;
