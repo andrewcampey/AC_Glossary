@@ -4,10 +4,10 @@
 		<th class="Term">Term</th>
         <th class="Definition">Definition</th>
 	  </tr>
-<% @glossaryitems.each do |GlossaryItem| %>
+<% @glossaryitems.each do |item| %>
   <tr>
-    <td><%= GlossaryItem.Term %></td>
-    <td><%= GlossaryItem.Definition %></td>
+    <td><%= item.Term %></td>
+    <td><%= item.Definition %></td>
   </tr>
 <% end %>
 </table>
