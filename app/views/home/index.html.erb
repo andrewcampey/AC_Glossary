@@ -6,8 +6,8 @@
 	  </tr>
 <% @glossaryitems.each do |GlossaryItem| %>
   <tr>
-    <td><%= glossaryitems.Term %></td>
-    <td><%= glossaryitems.Definition %></td>
+    <td><%= GlossaryItem.Term %></td>
+    <td><%= GlossaryItem.Definition %></td>
   </tr>
 <% end %>
 </table>
