@@ -1,19 +1,13 @@
-<h1>All users</h1>
-<h1>Listing users</h1>
-
-<table>
+<h2>Glossary</h2>
+    <table id="GlossaryTable">
+	  <tr>
+		<th class="Term">Term</th>
+        <th class="Definition">Definition</th>
+	  </tr>
+<% @glossaryitem.each do |GlossaryItem| %>
   <tr>
-    <th>Username</th>
-    <th>Password</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @users.each do |user| %>
-  <tr>
-    <td><%= user.Username %></td>
-    <td><%= user.Password %></td>
+    <td><%= glossaryitem.Term %></td>
+    <td><%= glossaryitem.Definition %></td>
   </tr>
 <% end %>
 </table>
