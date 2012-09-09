@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-	@glossaryitem = GlossaryItem.all
+	@glossaryitems = GlossaryItem.all
   end
 
   def login
