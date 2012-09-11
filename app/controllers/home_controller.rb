@@ -1,3 +1,5 @@
+require "json"
+
 class HomeController < ApplicationController
   def index
 	@glossaryitems = GlossaryItem.all
