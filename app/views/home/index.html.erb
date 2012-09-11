@@ -4,7 +4,12 @@
 		<th class="Term">Term</th>
         <th class="Definition">Definition</th>
 	  </tr>
-
+<% @glossaryitems.each do |item| %>
+  <tr>
+    <td><%= item.Term %></td>
+    <td><%= item.Definition %></td>
+  </tr>
+<% end %>
 </table>
 
 <br />
