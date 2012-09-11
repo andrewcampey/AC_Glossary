@@ -29,10 +29,12 @@ function addglossaryitem(Term, Definition) {
         success: function(data) {
             // The item was added to the db so add it to the table
             //AddRowToGlossary(data, Term, Definition);
+			alert('woot woot');
         },
         error: function(xhr, ajaxOptions, error) {
-            alert(xhr.status);
-            alert('Error: ' + xhr.responseText);
+            alert('doh');
+			//alert(xhr.status);
+            //alert('Error: ' + xhr.responseText);
         }
     });
 
