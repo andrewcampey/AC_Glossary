@@ -31,9 +31,8 @@ function addglossaryitem(Term, Description) {
 			alert('woot woot');
         },
         error: function(xhr, ajaxOptions, error) {
-            alert('doh');
-			//alert(xhr.status);
-            //alert('Error: ' + xhr.responseText);
+			alert(xhr.status);
+            alert('Error: ' + xhr.responseText);
         }
     });
 
