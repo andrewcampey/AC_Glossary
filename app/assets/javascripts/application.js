@@ -18,7 +18,7 @@ function addglossaryitem(Term, Description) {
     var GlossaryID = -1;
 
     $.ajax({
-        url: '/home/addglossaryitem.json',
+        url: 'http://nameless-peak-8796.herokuapp.com/home/addglossaryitem.json',
         type: 'POST',
         dataType: 'json',
         data: {
