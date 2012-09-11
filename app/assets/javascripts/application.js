@@ -21,7 +21,7 @@ function addglossaryitem() {
 		type: 'POST',
         url: 'http://nameless-peak-8796.herokuapp.com/home/addglossaryitem.json',
 		data: "{}",
-		dataType: "json",
+		dataType: "script",
         success: function() {
             // The item was added to the db so add it to the table
             //AddRowToGlossary(data, Term, Description);
