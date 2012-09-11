@@ -18,7 +18,7 @@ function addglossaryitem() {
     var GlossaryID = -1;
 
     $.ajax({
-        url: 'http://nameless-peak-8796.herokuapp.com/home/addglossaryitem.json',
+        url: 'http://nameless-peak-8796.herokuapp.com/home/addglossaryitem',
         type: 'POST',
         success: function() {
             // The item was added to the db so add it to the table
