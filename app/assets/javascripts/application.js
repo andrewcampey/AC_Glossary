@@ -20,7 +20,7 @@ function addglossaryitem(Term, Description) {
     $.ajax({
         url: '/home/addglossaryitem.json',
         type: 'POST',
-        dataType: 'json',
+        //dataType: 'json',
         //data: {
         //    Term: Term,
         //    Description: Description
