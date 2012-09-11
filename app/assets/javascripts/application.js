@@ -20,10 +20,6 @@ function addglossaryitem(Term, Description) {
     $.ajax({
         url: 'http://nameless-peak-8796.herokuapp.com/home/addglossaryitem.json',
         type: 'POST',
-        data: {
-            Term: Term,
-            Description: Description
-        },
         success: function() {
             // The item was added to the db so add it to the table
             //AddRowToGlossary(data, Term, Description);
