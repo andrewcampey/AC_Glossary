@@ -1,5 +1,3 @@
-require "json"
-
 class HomeController < ApplicationController
   def index
 	@glossaryitems = GlossaryItem.all
@@ -9,6 +7,7 @@ class HomeController < ApplicationController
   end
   
   def addglossaryitem
+	require "json"
     #@item = GlossaryItem.new(Term: params[:Term], Description: params[:Description])
 	#@item = GlossaryItem.new(Term: "CHECKTest4", Description: "CHECKTest4")
 	#@item.save
