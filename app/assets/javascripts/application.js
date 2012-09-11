@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require_tree .
 // json call to add the item to the glossary
-function addglossaryitem(Term, Definition) {
+function addglossaryitem(Term, Description) {
     var GlossaryID = -1;
 
     $.ajax({
@@ -24,11 +24,11 @@ function addglossaryitem(Term, Definition) {
 		contentType: 'application/json',
         data: {
             Term: Term,
-            Definition: Definition
+            Description: Description
         },
         success: function(data) {
             // The item was added to the db so add it to the table
-            //AddRowToGlossary(data, Term, Definition);
+            //AddRowToGlossary(data, Term, Description);
 			alert('woot woot');
         },
         error: function(xhr, ajaxOptions, error) {
