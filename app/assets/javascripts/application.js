@@ -20,19 +20,20 @@ function addglossaryitem(Term, Description) {
     $.ajax({
         url: '/home/addglossaryitem.json',
         type: 'POST',
-        //dataType: 'json',
-        //data: {
-        //    Term: Term,
-        //    Description: Description
-        //},
-        success: function() {
+        dataType: 'json',
+        data: {
+            Term: Term,
+            Description: Description
+        },
+        success: function(data) {
             // The item was added to the db so add it to the table
             //AddRowToGlossary(data, Term, Description);
 			alert('woot woot');
         },
         error: function(xhr, ajaxOptions, error) {
+            alert('doh');
 			alert(xhr.status);
-            alert('Error: ' + xhr.responseText);
+            //alert('Error: ' + xhr.responseText);
         }
     });
 
