@@ -18,7 +18,7 @@ function addglossaryitem(Term, Definition) {
     var GlossaryID = -1;
 
     $.ajax({
-        url: '/home/addglossaryitem',
+        url: '/home/addglossaryitem.json',
         type: 'POST',
         dataType: 'json',
         data: {
