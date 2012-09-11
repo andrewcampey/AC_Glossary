@@ -21,7 +21,6 @@ function addglossaryitem(Term, Description) {
         url: '/home/addglossaryitem.json',
         type: 'POST',
         dataType: 'json',
-		contentType: 'application/json',
         data: {
             Term: Term,
             Description: Description
