@@ -13,3 +13,27 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+// json call to add the item to the glossary
+function addglossaryitem(Term, Definition) {
+    var GlossaryID = -1;
+
+    $.ajax({
+        url: '/home/addglossaryitem',
+        type: 'POST',
+        dataType: 'json',
+        data: {
+            Term: Term,
+            Definition: Definition
+        },
+        success: function(data) {
+            // The item was added to the db so add it to the table
+            //AddRowToGlossary(data, Term, Definition);
+        },
+        error: function(xhr, ajaxOptions, error) {
+            alert(xhr.status);
+            alert('Error: ' + xhr.responseText);
+        }
+    });
+
+    return GlossaryID;
+}
