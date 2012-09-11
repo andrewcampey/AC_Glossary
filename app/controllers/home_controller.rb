@@ -10,10 +10,10 @@ class HomeController < ApplicationController
   
   def addglossaryitem
     #@item = GlossaryItem.new(Term: params[:Term], Description: params[:Description])
-	@item = GlossaryItem.new(Term: "CHECKTest3", Description: "CHECKTest3")
+	@item = GlossaryItem.new(Term: "CHECKTest4", Description: "CHECKTest4")
 	@item.save
-    respond_to do |format|
-        format.json { render :json => @item.id }
-    end
+    #respond_to do |format|
+    #    format.json { render :json => @item.id }
+    #end
   end
 end
