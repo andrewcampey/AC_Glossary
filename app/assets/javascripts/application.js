@@ -22,10 +22,10 @@ function addglossaryitem(Term, Definition) {
         type: 'POST',
         dataType: 'json',
 		contentType: 'application/json',
-        JSON.stringify({
+        data: {
             Term: Term,
             Definition: Definition
-        }),
+        },
         success: function(data) {
             // The item was added to the db so add it to the table
             //AddRowToGlossary(data, Term, Definition);
