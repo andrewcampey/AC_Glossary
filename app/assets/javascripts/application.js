@@ -19,7 +19,7 @@ function addglossaryitem() {
 
     $.ajax({
 		type: 'POST',
-        url: 'http://nameless-peak-8796.herokuapp.com/home/addglossaryitem.json',
+        url: 'http://nameless-peak-8796.herokuapp.com/home/addglossaryitem',
 		data: "{}",
 		dataType: "script",
         success: function() {
