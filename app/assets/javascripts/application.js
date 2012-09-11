@@ -21,11 +21,11 @@ function addglossaryitem(Term, Description) {
         url: '/home/addglossaryitem.json',
         type: 'POST',
         dataType: 'json',
-        data: {
-            Term: Term,
-            Description: Description
-        },
-        success: function(data) {
+        //data: {
+        //    Term: Term,
+        //    Description: Description
+        //},
+        success: function() {
             // The item was added to the db so add it to the table
             //AddRowToGlossary(data, Term, Description);
 			alert('woot woot');
