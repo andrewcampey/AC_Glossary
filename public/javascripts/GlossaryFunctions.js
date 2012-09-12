@@ -40,11 +40,11 @@ function DeleteItem() {
 }
 
 // Add item to the table
-function AddRowToGlossary(GlossaryID, Term, Definition) {
+function AddRowToGlossary(GlossaryID, Term, Description) {
     // Add item to the datatable
     var newRow = $('#GlossaryTable').dataTable().fnAddData([
         Term,
-        Definition,
+        Description,
         "<a href=\"\" onclick=\"EditGlossaryItem(" + GlossaryID + ");return false;\">Edit Item</a>",
         "<a href=\"\" onclick=\"DeleteGlossaryDialog(" + GlossaryID + ");return false;\">Delete</a>"
         ]
@@ -55,7 +55,7 @@ function AddRowToGlossary(GlossaryID, Term, Definition) {
     var nTr = oSettings.aoData[newRow[0]].nTr;
     $($('#GlossaryTable tr')[nTr.rowIndex]).attr('id', "RowID" + GlossaryID);    
     $('td', nTr)[0].setAttribute( 'id', "term" + GlossaryID);
-    $('td', nTr)[1].setAttribute('id', "definition" + GlossaryID);
+    $('td', nTr)[1].setAttribute('id', "description" + GlossaryID);
 }
 
 // Delete item to the table

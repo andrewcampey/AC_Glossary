@@ -9,8 +9,8 @@ function LoadAddUpdateGlossaryDialog() {
     $("#dialog:ui-dialog").dialog("destroy");
 
     var term = $("#term"),
-    definition = $("#definition"),
-    allFields = $([]).add(term).add(definition),
+    description = $("#description"),
+    allFields = $([]).add(term).add(description),
     tips = $(".validateTips");
 
     $("#dialog-form").dialog({
@@ -24,17 +24,17 @@ function LoadAddUpdateGlossaryDialog() {
                 allFields.removeClass("ui-state-error");
 
                 bValid = bValid && checkLength(term, "term", 1, 255);
-                bValid = bValid && checkLength(definition, "definition", 5, 2000);
+                bValid = bValid && checkLength(description, "description", 5, 2000);
 
                 if (bValid) {
                     if ($("input#glossaryitemID").val() == -1) {
-                        AddGlossaryItem(term.val(), definition.val());
+                        AddGlossaryItem(term.val(), description.val());
                     } else {
                         // Update the item in the database and then update the values in the table;
-                        GlossaryID = UpdateGlossaryItem($("input#glossaryitemID").val(), term.val(), definition.val());
+                        GlossaryID = UpdateGlossaryItem($("input#glossaryitemID").val(), term.val(), description.val());
                         glossaryitemID = $("input#glossaryitemID").val();
                         $("#term" + glossaryitemID).html(term.val());
-                        $("#definition" + glossaryitemID).html(definition.val());
+                        $("#description" + glossaryitemID).html(description.val());
                     }
 
                     $(this).dialog("close");

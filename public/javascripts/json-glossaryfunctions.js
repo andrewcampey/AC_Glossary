@@ -1,5 +1,5 @@
 ﻿// json call to add the item to the glossary
-function AddGlossaryItem(Term, Definition) {
+function AddGlossaryItem(Term, Description) {
     var GlossaryID = -1;
 
     $.ajax({
@@ -8,11 +8,11 @@ function AddGlossaryItem(Term, Definition) {
         dataType: 'json',
         data: {
             Term: Term,
-            Definition: Definition
+            Description: Description
         },
         success: function(data) {
             // The item was added to the db so add it to the table
-            AddRowToGlossary(data, Term, Definition);
+            AddRowToGlossary(data, Term, Description);
         },
         error: function(xhr, ajaxOptions, error) {
             alert(xhr.status);
@@ -24,7 +24,7 @@ function AddGlossaryItem(Term, Definition) {
 }
 
 // json call to update an item to the glossary
-function UpdateGlossaryItem(GlossaryID, Term, Definition) {
+function UpdateGlossaryItem(GlossaryID, Term, Description) {
 
     $.ajax({
         url: '/home/UpdateGlossaryItem',
@@ -33,7 +33,7 @@ function UpdateGlossaryItem(GlossaryID, Term, Definition) {
         data: {
             GlossaryID: GlossaryID,
             Term: Term,
-            Definition: Definition
+            Description: Description
         },
         success: function(data) {
             data;
