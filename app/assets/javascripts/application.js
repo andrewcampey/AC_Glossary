@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+/*
 // json call to add the item to the glossary
 function addglossaryitem() {
     var GlossaryID = -1;
@@ -35,4 +36,4 @@ function addglossaryitem() {
     });
 
     return GlossaryID;
-}
+}*/
