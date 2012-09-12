@@ -12,7 +12,7 @@
 <% end %>
 </table>
 <%= start_form_tag %>
-<% form_tag :url => {:action => 'addglossaryitem'}, :remote => true do %>
+<% form_tag :url => {:action => 'addglossaryitem', :id => Term}, :remote => true do %>
             <%= submit_tag "Add to Cart" %>
         <% end %>
 <%= end_form_tag %>
