@@ -21,7 +21,7 @@ function NewGlossaryItem() {
 function EditGlossaryItem(glossaryitemID) {
     $("#dialog-form").attr("title", "Edit glossary item");
     $("input#term").val($("#term" + glossaryitemID).html());
-    $("textarea#definition").val($("#definition" + glossaryitemID).html());
+    $("textarea#description").val($("#description" + glossaryitemID).html());
     $("input#glossaryitemID").val(glossaryitemID);
     $("#dialog-form").dialog("open");
 }
