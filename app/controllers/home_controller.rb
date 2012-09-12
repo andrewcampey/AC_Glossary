@@ -15,7 +15,7 @@ class HomeController < ApplicationController
 	#format.js { 1 }
     #end
 	respond_to do |format|
-		format.html { 1 }
+		format.js { id: 1 }
     end
   end
 end
