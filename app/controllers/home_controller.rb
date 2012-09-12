@@ -14,5 +14,8 @@ class HomeController < ApplicationController
     #    format.json { render :json => @item.id }
 	#format.js { 1 }
     #end
+	respond_to do |format|
+		format.html { 1 }
+    end
   end
 end
