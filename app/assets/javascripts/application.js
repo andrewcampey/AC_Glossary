@@ -13,11 +13,27 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-/*
 // json call to add the item to the glossary
 function addglossaryitem() {
     var GlossaryID = -1;
 
+	$.ajax({
+	url: 'http://nameless-peak-8796.herokuapp.com/home/addglossaryitem',
+	data: { },
+	async: true,
+	dataType: 'script',
+        success: function() {
+            // The item was added to the db so add it to the table
+            //AddRowToGlossary(data, Term, Description);
+			alert('woot woot');
+        },
+        error: function(xhr, ajaxOptions, error) {
+            alert('doh');
+			//alert(xhr.status);
+            alert('Error: ' + xhr.responseText);
+        }
+	});
+/*
     $.ajax({
 		type: 'POST',
         url: 'http://nameless-peak-8796.herokuapp.com/home/addglossaryitem',
@@ -33,7 +49,7 @@ function addglossaryitem() {
 			//alert(xhr.status);
             alert('Error: ' + xhr.responseText);
         }
-    });
+    });*/
 
     return GlossaryID;
-}*/
+}
