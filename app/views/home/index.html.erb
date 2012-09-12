@@ -56,7 +56,7 @@ $(function() {
 <% @glossaryitems.each do |item| %>
   <tr id="RowID<%=item.id %>">
     <td id="term<%=item.id %>"><%= item.Term %></td>
-    <td id="definition<%=item.id %>"><%= item.Description %></td>
+    <td id="description<%=item.id %>"><%= item.Description %></td>
     <td><a href="" onclick="EditGlossaryItem(<%=item.id %>);return false;">Edit Item</a></td>
     <td><a href="" onclick="DeleteGlossaryDialog(<%=item.id %>);return false;">Delete</a></td>
   </tr>
