@@ -1,32 +1,26 @@
-<% content_for :head do %>
-  <script type="text/javascript">
-    $(function() {
-	        InitaliseDialogs();
+<script type="text/javascript">
+$(function() {
+		InitaliseDialogs();
 
-			columns = [
-				null,
-				null,
-				{ "bSortable": false },
-				{ "bSortable": false }
-				];
-	        var oGlossary = $('#GlossaryTable').dataTable({
-	            "bJQueryUI": true,
-	            "bPaginate": false,
-	            "bLengthChange": false,
-	            "bFilter": true,
-	            "bSort": true,
-	            "bInfo": false,
-	            "bAutoWidth": false,
-	            "aoColumns": columns
-	        });
+		columns = [
+			null,
+			null,
+			{ "bSortable": false },
+			{ "bSortable": false }
+			];
+		var oGlossary = $('#GlossaryTable').dataTable({
+			"bJQueryUI": true,
+			"bPaginate": false,
+			"bLengthChange": false,
+			"bFilter": true,
+			"bSort": true,
+			"bInfo": false,
+			"bAutoWidth": false,
+			"aoColumns": columns
+		});
 
-	    });
-	</script>
-	<script type="text/javascript" src="../../javascripts/json-glossaryfunctions.js"></script>
-    <script type="text/javascript" src="../../javascripts/DialogFunctions.js"></script>
-	<script type="text/javascript" src="../../javascripts/GlossaryFunctions.js"></script>
-	<script type="text/javascript" src="../../javascripts/jquery.dataTables.js"></script>
-<% end %>
+	});
+</script>
 
 <div id="dialog-form" title="Edit glossary item">
 	<p>All form fields are required.</p>
