@@ -11,5 +11,7 @@
   </tr>
 <% end %>
 </table>
-
+<% form_tag :url => {:action => 'addglossaryitem'}, :remote => true do %>
+            <%= submit_tag "Add to Cart" %>
+        <% end %>
 <br />
