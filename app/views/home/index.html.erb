@@ -44,12 +44,15 @@ $(function() {
 
 <h2>Glossary</h2>
     <table id="GlossaryTable">
-	  <tr>
-		<th class="Term">Term</th>
-        <th class="Description">Description</th>
-        <th class="EditDelete">Edit</th>
-        <th class="EditDelete">Delete</th>
-	  </tr>
+		<thead>
+		  <tr>
+			<th class="Term">Term</th>
+			<th class="Description">Description</th>
+			<th class="EditDelete">Edit</th>
+			<th class="EditDelete">Delete</th>
+		  </tr>
+		</thead>
+		<tbody>
 <% @glossaryitems.each do |item| %>
   <tr id="RowID<%=item.id %>">
     <td id="term<%=item.id %>"><%= item.Term %></td>
@@ -58,6 +61,7 @@ $(function() {
     <td><a href="" onclick="DeleteGlossaryDialog(<%=item.id %>);return false;">Delete</a></td>
   </tr>
 <% end %>
+	</tbody>
 </table>
 <INPUT TYPE=BUTTON onclick="addglossaryitem()">Run Biatch!</INPUT>
 <br />
