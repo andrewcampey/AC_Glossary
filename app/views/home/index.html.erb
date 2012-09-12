@@ -11,6 +11,7 @@
   </tr>
 <% end %>
 </table>
-<%= link_to_remote( "click here",
-                         :url =>{ :action => :addglossaryitem }) %>
+<% form_tag :url => {:action => 'addglossaryitem'}, :remote => true do %>
+            <%= submit_tag "Add to Cart" %>
+        <% end %>
 <br />
