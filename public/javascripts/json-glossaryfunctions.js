@@ -25,43 +25,45 @@ function addglossaryitem(Term, Description) {
 }
 
 // json call to update an item to the glossary
-function UpdateGlossaryItem(GlossaryID, Term, Description) {
+function updateglossaryitem(GlossaryID, Term, Description) {
 
-    $.ajax({
-        url: '/home/UpdateGlossaryItem',
-        type: 'POST',
-        dataType: 'json',
-        data: {
-            GlossaryID: GlossaryID,
-            Term: Term,
-            Description: Description
-        },
+	$.ajax({
+	url: '/home/updateglossaryitem',
+	data: {
+		GlossaryID: GlossaryID,
+		Term: Term,
+        Description: Description
+	},
+	async: true,
+	//dataType: 'script',
         success: function(data) {
-            data;
+			data;
         },
         error: function(xhr, ajaxOptions, error) {
-            alert(xhr.status);
+			alert(xhr.status);
             alert('Error: ' + xhr.responseText);
-        }
-    });
+		}
+	});
 }
 
 // json call to delete an item from the glossary
-function DeleteGlossaryItem(GlossaryID) {
+function deleteglossaryitem(GlossaryID) {
 
-    $.ajax({
-        url: '/home/DeleteGlossaryItem',
-        type: 'POST',
-        dataType: 'json',
-        data: {
-            GlossaryID: GlossaryID
-        },
-        success: function(data) {
-            data;
-        },
-        error: function(xhr, ajaxOptions, error) {
-            alert(xhr.status);
-            alert('Error: ' + xhr.responseText);
-        }
-    });
+	$.ajax({
+		url: '/home/deleteglossaryitem',
+		data: {
+			GlossaryID: GlossaryID,
+			Term: Term,
+			Description: Description
+		},
+		async: true,
+		//dataType: 'script',
+			success: function(data) {
+				data;
+			},
+			error: function(xhr, ajaxOptions, error) {
+				alert(xhr.status);
+				alert('Error: ' + xhr.responseText);
+			}
+	});
 }

@@ -15,4 +15,9 @@ class HomeController < ApplicationController
 		format.js { render text: "@item.id" }
     end
   end
+  
+  def deleteglossaryitem
+	@item = GlossaryItem.delete(id:: params[:id:])
+	@item.save
+  end
 end
