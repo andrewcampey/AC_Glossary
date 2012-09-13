@@ -5,6 +5,7 @@ ACGlossary::Application.routes.draw do
 
   get "home/addglossaryitem"
   
+  get "home/deleteglossaryitem"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
