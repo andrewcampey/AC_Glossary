@@ -5,8 +5,7 @@ function addglossaryitem(Term, Description) {
 	$.ajax({
 	url: '/home/addglossaryitem',
 	data: {
-		Term: Term,
-        Description: Description
+
 	},
 	async: true,
 	//dataType: 'script',
