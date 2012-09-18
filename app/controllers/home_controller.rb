@@ -7,8 +7,8 @@ class HomeController < ApplicationController
   end
   
   def addglossaryitem
-    @item = GlossaryItem.new(Term: params[:Term], Description: params[:Description])
-	#@item = GlossaryItem.new(Term: "CHECKTest7", Description: "CHECKTest7")
+    #@item = GlossaryItem.new(Term: params[:Term], Description: params[:Description])
+	@item = GlossaryItem.new(Term: "CHECKTest7", Description: "CHECKTest7")
 	@item.save
 
 	respond_to do |format|
