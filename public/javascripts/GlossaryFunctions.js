@@ -19,10 +19,8 @@ function NewGlossaryItem() {
 
 // Sets the title for the Add/Edit glossary form and updates the required fields
 function EditGlossaryItem(glossaryitemID) {
-alert('test');
     $("#dialog-form").attr("title", "Edit glossary item");
     $("input#term").val($("#term" + glossaryitemID).html());
-	ALERT($("#description" + glossaryitemID).html());
     $("textarea#description").val($("#description" + glossaryitemID).html());
     $("input#glossaryitemID").val(glossaryitemID);
     $("#dialog-form").dialog("open");
