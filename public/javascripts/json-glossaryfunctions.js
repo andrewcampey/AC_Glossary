@@ -12,6 +12,7 @@ function addglossaryitem(Term, Description) {
         success: function(data) {
             // The item was added to the db so add it to the table
             AddRowToGlossary(data, Term, Description);
+			GlossaryID = data;
         },
         error: function(xhr, ajaxOptions, error) {
 			alert(xhr.status);
@@ -28,7 +29,7 @@ function updateglossaryitem(GlossaryID, Term, Description) {
 	$.ajax({
 	url: '/home/updateglossaryitem',
 	data: {
-		GlossaryID: GlossaryID,
+		id: GlossaryID,
 		Term: Term,
         Description: Description
 	},
