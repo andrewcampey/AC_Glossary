@@ -17,7 +17,7 @@ class HomeController < ApplicationController
  
    def updateglossaryitem
 	@item = GlossaryItem.find(params[:id])
-    @item = GlossaryItem.update(Term: params[:Term], Description: params[:Description])
+    @item.update(Term: params[:Term], Description: params[:Description])
 	@item.save
   end
   
