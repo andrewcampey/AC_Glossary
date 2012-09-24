@@ -16,9 +16,11 @@ class HomeController < ApplicationController
   end
  
    def updateglossaryitem
-	@item = GlossaryItem.find(params[:id])
-    @item.update(Term: params[:Term], Description: params[:Description])
-	@item.save
+    GlossaryItem.update(params[:id], Term: params[:Term], Description: params[:Description])
+	
+	respond_to do |format|
+		format.js { render :text => params[:id] }
+    end
   end
   
   def deleteglossaryitem
