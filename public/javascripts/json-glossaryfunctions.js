@@ -11,13 +11,15 @@ function addglossaryitem(Term, Description) {
 	async: true,
 	dataType: 'script',
         success: function(data) {
+			alert('Success');
 			alert(data);
             // The item was added to the db so add it to the table
             //AddRowToGlossary(data, Term, Description);
         },
         error: function(xhr, ajaxOptions, error) {
+			alert('Failure');
 			alert(xhr.status);
-            alert('Error: ' + xhr.responseText);
+            //alert('Error: ' + xhr.responseText);
 		}
 	});
 
