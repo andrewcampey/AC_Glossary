@@ -9,7 +9,7 @@ function addglossaryitem(Term, Description) {
         Description: Description*/
 	},
 	async: true,
-	//dataType: 'script',
+	dataType: 'script',
         success: function(data) {
 			alert(data);
             // The item was added to the db so add it to the table
