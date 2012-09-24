@@ -5,15 +5,14 @@ function addglossaryitem(Term, Description) {
 	$.ajax({
 	url: '/home/addglossaryitem',
 	data: {
-		/*Term: Term,
-        Description: Description*/
+		Term: Term,
+        Description: Description
 	},
 	async: true,
 	//dataType: 'script',
         success: function(data) {
-			alert(data);
             // The item was added to the db so add it to the table
-            //AddRowToGlossary(data, Term, Description);
+            AddRowToGlossary(data, Term, Description);
         },
         error: function(xhr, ajaxOptions, error) {
 			alert(xhr.status);
