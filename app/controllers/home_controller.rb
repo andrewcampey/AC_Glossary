@@ -22,8 +22,10 @@ class HomeController < ApplicationController
   end
   
   def deleteglossaryitem
-	@item = GlossaryItem.find(params[:id])
-    @item.delete(params[:id])
-	@item.save
+	GlossaryItem.delete(params[:id])
+	
+	respond_to do |format|
+		format.js { render :text => params[:id] }
+    end
   end
 end
