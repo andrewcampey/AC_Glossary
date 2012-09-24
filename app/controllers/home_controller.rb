@@ -22,6 +22,8 @@ class HomeController < ApplicationController
   end
   
   def deleteglossaryitem
-	GlossaryItem.delete(params[:id])
+	@item = GlossaryItem.find(params[:id])
+    @item.delete(params[:id])
+	@item.save
   end
 end
