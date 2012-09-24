@@ -12,7 +12,7 @@ class HomeController < ApplicationController
 	@item.save
 
 	respond_to do |format|
-		format.js { render text: "@item.id" }
+		format.js { render text: "item.id" }
     end
   end
   
