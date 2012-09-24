@@ -51,12 +51,9 @@ function deleteglossaryitem(GlossaryID) {
 	$.ajax({
 		url: '/home/deleteglossaryitem',
 		data: {
-			GlossaryID: GlossaryID,
-			Term: Term,
-			Description: Description
+			id: GlossaryID
 		},
 		async: true,
-		//dataType: 'script',
 			success: function(data) {
 				data;
 			},
