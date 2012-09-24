@@ -31,7 +31,7 @@ function LoadAddUpdateGlossaryDialog() {
                         addglossaryitem(term.val(), description.val());
                     } else {
                         // Update the item in the database and then update the values in the table;
-                        GlossaryID = UpdateGlossaryItem($("input#id").val(), term.val(), description.val());
+                        GlossaryID = updateglossaryitem($("input#id").val(), term.val(), description.val());
                         id = $("input#id").val();
                         $("#term" + id).html(term.val());
                         $("#description" + id).html(description.val());

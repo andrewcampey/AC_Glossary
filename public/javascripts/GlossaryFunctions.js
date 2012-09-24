@@ -36,7 +36,7 @@ function DeleteGlossaryDialog(id) {
 function DeleteItem() {
     var id = $("input#deleteglossaryitemID").val();
     DeleteRowFromTable(id);
-    DeleteGlossaryItem(id);
+    deleteglossaryitem(id);
 }
 
 // Add item to the table
