@@ -23,7 +23,7 @@ function addglossaryitem(Term, Description) {
 		}
 	});
 
-    return GlossaryID;
+    //return GlossaryID;
 }
 
 // json call to update an item to the glossary
