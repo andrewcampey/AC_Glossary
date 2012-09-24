@@ -34,14 +34,10 @@ function updateglossaryitem(GlossaryID, Term, Description) {
         Description: Description
 	},
 	async: true,
-	//dataType: 'script',
-        success: function(data) {
-			data;
-        },
-        error: function(xhr, ajaxOptions, error) {
-			alert(xhr.status);
-            alert('Error: ' + xhr.responseText);
-		}
+	error: function(xhr, ajaxOptions, error) {
+		alert(xhr.status);
+		alert('Error: ' + xhr.responseText);
+	}
 	});
 }
 
@@ -54,12 +50,9 @@ function deleteglossaryitem(GlossaryID) {
 			id: GlossaryID
 		},
 		async: true,
-			success: function(data) {
-				data;
-			},
-			error: function(xhr, ajaxOptions, error) {
-				alert(xhr.status);
-				alert('Error: ' + xhr.responseText);
-			}
+		error: function(xhr, ajaxOptions, error) {
+			alert(xhr.status);
+			alert('Error: ' + xhr.responseText);
+		}
 	});
 }
