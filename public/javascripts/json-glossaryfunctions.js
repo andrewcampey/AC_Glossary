@@ -9,21 +9,19 @@ function addglossaryitem(Term, Description) {
         Description: Description*/
 	},
 	async: true,
-	dataType: 'script',
+	//dataType: 'script',
         success: function(data) {
-			alert('Success');
 			alert(data);
             // The item was added to the db so add it to the table
             //AddRowToGlossary(data, Term, Description);
         },
         error: function(xhr, ajaxOptions, error) {
-			alert('Failure');
 			alert(xhr.status);
-            //alert('Error: ' + xhr.responseText);
+            alert('Error: ' + xhr.responseText);
 		}
 	});
 
-    //return GlossaryID;
+    return GlossaryID;
 }
 
 // json call to update an item to the glossary
