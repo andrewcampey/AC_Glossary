@@ -27,14 +27,14 @@ function LoadAddUpdateGlossaryDialog() {
                 bValid = bValid && checkLength(description, "description", 5, 2000);
 
                 if (bValid) {
-                    if ($("input#glossaryitemID").val() == -1) {
+                    if ($("input#id").val() == -1) {
                         addglossaryitem(term.val(), description.val());
                     } else {
                         // Update the item in the database and then update the values in the table;
-                        GlossaryID = UpdateGlossaryItem($("input#glossaryitemID").val(), term.val(), description.val());
-                        glossaryitemID = $("input#glossaryitemID").val();
-                        $("#term" + glossaryitemID).html(term.val());
-                        $("#description" + glossaryitemID).html(description.val());
+                        GlossaryID = UpdateGlossaryItem($("input#id").val(), term.val(), description.val());
+                        id = $("input#id").val();
+                        $("#term" + id).html(term.val());
+                        $("#description" + id).html(description.val());
                     }
 
                     $(this).dialog("close");
