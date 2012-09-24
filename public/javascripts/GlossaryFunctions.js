@@ -12,31 +12,31 @@ function checkLength(o, n, min, max) {
 
 // Sets the title for the Add/Edit glossary form and sets the Glossary Item ID
 function NewGlossaryItem() {
-    $("input#glossaryitemID").val(-1);
+    $("input#id").val(-1);
     $("#dialog-form").attr("title", "New glossary item");
     $("#dialog-form").dialog("open");
 }
 
 // Sets the title for the Add/Edit glossary form and updates the required fields
-function EditGlossaryItem(glossaryitemID) {
+function EditGlossaryItem(id) {
     $("#dialog-form").attr("title", "Edit glossary item");
-    $("input#term").val($("#term" + glossaryitemID).html());
-    $("textarea#description").val($("#description" + glossaryitemID).html());
-    $("input#glossaryitemID").val(glossaryitemID);
+    $("input#term").val($("#term" + id).html());
+    $("textarea#description").val($("#description" + id).html());
+    $("input#id").val(id);
     $("#dialog-form").dialog("open");
 }
 
 // Opens the dekete dialog and then calls the Delete item function
-function DeleteGlossaryDialog(glossaryitemID) {
-    $("input#deleteglossaryitemID").val(glossaryitemID);
+function DeleteGlossaryDialog(id) {
+    $("input#deleteglossaryitemID").val(id);
     $("#dialog-confirm").dialog("open");
 }
 
 // Deletes the selected item from the glossary and then removes the item from the table.
 function DeleteItem() {
-    var glossaryitemID = $("input#deleteglossaryitemID").val();
-    DeleteRowFromTable(glossaryitemID);
-    DeleteGlossaryItem(glossaryitemID);
+    var id = $("input#deleteglossaryitemID").val();
+    DeleteRowFromTable(id);
+    DeleteGlossaryItem(id);
 }
 
 // Add item to the table
